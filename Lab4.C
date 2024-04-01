@@ -1,3 +1,10 @@
+/*
+Jia Gapuz
+Math 230
+Instructor: Mimi Rasky
+Date: 3/7/2024
+Lab #4
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,7 +34,7 @@ int main()
 
     printf("The length of the string is: %d\n", length);
 
-    //invoke serchit function
+    //invoke serchit function and store in newString
     newString = serchit(myString, myChar);
 
     //print new string if myChar was found in the string
@@ -45,13 +52,12 @@ int main()
     printf("Address           Contents     Decimal      ASCII\n");
     while(*(newString + i))
     {
-        printf("%010X          0x%2X %11d %9c\n", &newString + i,*(newString + i),*(newString + i),*(newString + i));
+        printf("%010X %8s 0x%2X %11d %9c\n", &newString + i,"",*(newString + i),*(newString + i),*(newString + i));
         i++;
     }
 
     //print null character info
-    printf("%010X          0x%02X %11d %9c\n", &newString + i,*(newString + i),*(newString + i),*(newString + i));
-
+    printf("%010X %s 0x%02X %11d %9c\n", &newString + i,"",*(newString + i),*(newString + i),*(newString + i));
 
     return 0;
 }
@@ -65,16 +71,13 @@ char *serchit(char *str, char ref_char)
     //traverse string
     while(str[i])
     {
-        //if current char matches ref_char,
-        //return its address
+        //if current char matches ref_char, return its address
         if(str[i] == ref_char)
             return &str[i];
 
         i++;
     }
 
-    //if ref_char was never found in the string,
-    //return null character
+    //if ref_char was never found in the string, return null character
     return &str[i];
-
 }
