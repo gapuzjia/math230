@@ -58,7 +58,7 @@ int main()
     }
 
     //close file
-    close(inputfile);
+    fclose(inputfile);
 
     //invoke printArray function
     printArray(array, rows, cols);
