@@ -1,9 +1,0 @@
-Machine code   opcode   funct     Inst   format   rs   rt   rd   shamt     Imm
- 0x24020004 0x09 - addiu I  0  2 - -    4
- 0x29b701e2 0x0a -  slti I 13 23 - -  482
- 0x34240000 0x0d -   ori I  1  4 - -    0
- 0x0040a020 0x00 0x20   add R  2  0 20  0 -
- 0x00408820 0x00 0x20   add R  2  0 17  0 -
- 0x22a9ff9c 0x08 -  addi I 21  9 - - -100
-
-Opcode sum:    40
